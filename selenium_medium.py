@@ -74,4 +74,4 @@ for i in range(num_iterations):
     driver.quit()
 
     # Wait for a moment before starting the next iteration (optional)
-    time.sleep(2)
+    time.sleep(1)
