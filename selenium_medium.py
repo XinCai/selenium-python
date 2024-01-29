@@ -52,7 +52,7 @@ url_to_open='https://medium.com/p/3f4d13258591'
 
 
 
-num_iterations = 50
+num_iterations = 500
 
 # Loop to open URL, perform actions, and close browser
 for i in range(num_iterations):
