@@ -51,8 +51,7 @@ PATH = "chromedriver"
 url_to_open='https://medium.com/p/3f4d13258591'
 
 
-
-num_iterations = 50
+num_iterations = 5
 
 # Loop to open URL, perform actions, and close browser
 for i in range(num_iterations):
@@ -68,7 +67,10 @@ for i in range(num_iterations):
     driver.maximize_window()
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     # Wait for a moment (you can adjust this as needed)
-    time.sleep(2)
+    login_element = driver.find_element(By.CSS_SELECTOR('[data-testid="headerSignInButton"]'))
+    time.sleep(1)
+    login_element.click()
+    time.sleep(1)
 
     # Close the browser
     driver.quit()
