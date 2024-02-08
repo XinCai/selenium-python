@@ -50,7 +50,6 @@ PATH = "chromedriver"
 # url_to_open='https://medium.com/@ozbillwang/vercel-two-use-cases-i-learned-recently-e0e07b21ede5'
 url_to_open='https://medium.com/p/3f4d13258591'
 
-
 num_iterations = 5
 
 # Loop to open URL, perform actions, and close browser
@@ -65,6 +64,17 @@ for i in range(num_iterations):
     # For example, printing the page title
     print("Iteration:", i + 1, "- Page Title:", driver.title)
     driver.maximize_window()
+    
+    # element=driver.find_element(By.XPATH, '//*[@id="root"]/div/div[3]/div[1]/div[2]/div[4]/div/div/p/span/a')
+    # element.click()
+
+    # singin=driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div[2]/div[4]/button/div')
+    # singin.click()
+
+    # email=driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div[2]/div/div[1]/div/div/div[2]/div/p/input')
+    # email.send_keys("caixinemail@gmail.com")
+
+    
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     # Wait for a moment (you can adjust this as needed)
     login_element = driver.find_element(By.CSS_SELECTOR('[data-testid="headerSignInButton"]'))
